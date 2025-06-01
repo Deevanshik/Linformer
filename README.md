@@ -121,7 +121,6 @@ Linformer consistently achieves faster inference than standard Transformers.
 - Evaluation was based on generating 1000 tokens across different batch sizes and context lengths (starting at batch size = 1 and context length = 4096).  
 - The embedding dimension was 512, and Linformer was tested for k = 32, 64, 128, and 256.
 
-**Inference Time Plot**  
 ![Inference Time](Assets/inference_time_comparison.png)
 
 ---
@@ -130,7 +129,6 @@ Linformer consistently achieves faster inference than standard Transformers.
 Training time also decreased with Linformer, showing trends similar to inference.  
 - The model benefits from reduced attention complexity, resulting in faster training on long sequences.
 
-** Training Time Plot**  
 ![Training Time](Assets/training_time_2.png)
 
 ---
