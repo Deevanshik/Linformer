@@ -10,8 +10,8 @@ All code is provided in a single Jupyter Notebook and includes training, inferen
 
 - ✅ Linformer model implementation  
 - ✅ Training pipeline and inference code  
-- ✅ Loss curves and performance visualizations  
-- ✅ Ablation studies: training & inference time comparison  
+- ✅ Loss curve
+- ✅ Ablation studies: training & inference time comparison
 
 ---
 
@@ -20,6 +20,7 @@ All code is provided in a single Jupyter Notebook and includes training, inferen
 
 - Linformer replaces the full self-attention with projected key and value matrices, reducing the attention complexity from $O(n^2)$ to $O(n)$.
 - The model architecture remains compatible with the standard Transformer pipeline, allowing seamless integration into existing frameworks while enabling faster training and inference on long sequences.
+- Parameter sharing in Linformer can be done at three levels : `headwise` `key-value` `layerwise` progressively reducing the number of distinct projection matrices from 24 to 12 to 1 in a 12-layer, 12-head model.
 
 ---
 
@@ -66,3 +67,9 @@ The training process for the Linformer model is structured to be efficient, modu
    - **Cosine decay:** Smoothly decays the learning rate following a cosine schedule for the remaining steps
 
 This modular and well-structured pipeline ensures clarity, ease of experimentation, and efficient training on long sequences.
+
+---
+
+## Loss v/s Iterations Curve
+![Loss Curve](Assets/loss_curve.png)
+
