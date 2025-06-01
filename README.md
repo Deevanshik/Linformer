@@ -115,29 +115,27 @@ This modular and well-structured pipeline ensures clarity, ease of experimentati
 
 This section highlights key outcomes from ablation studies comparing Linformer and standard Transformer architectures.
 
-### 1. ⏱️ Inference Time Reduction  
+### 1. Inference Time Reduction  
 Linformer consistently achieves faster inference than standard Transformers.  
 - As the number of iterations increases, the time gap widens in Linformer’s favor.  
 - Evaluation was based on generating 1000 tokens across different batch sizes and context lengths (starting at batch size = 1 and context length = 4096).  
 - The embedding dimension was 512, and Linformer was tested for k = 32, 64, 128, and 256.
 
-**📷 Inference Time Plot**  
-*Replace this placeholder with your image:*  
+**Inference Time Plot**  
 ![Inference Time](Assets/inference_time_comparison.png)
 
 ---
 
-### 2. 🏋️‍♂️ Training Time Reduction  
+### 2. Training Time Reduction  
 Training time also decreased with Linformer, showing trends similar to inference.  
 - The model benefits from reduced attention complexity, resulting in faster training on long sequences.
 
-**📷 Training Time Plot**  
-*Replace this placeholder with your image:*  
+** Training Time Plot**  
 ![Training Time](Assets/training_time_2.png)
 
 ---
 
-### 3. 🧠 Memory Efficiency & Bottleneck Relief  
+### 3. Memory Efficiency & Bottleneck Relief  
 Linformer alleviates memory bottlenecks seen in standard Transformers.  
 - On a 16GB GPU:
   - **Transformer:** Maxed out at context length 4096 and embedding dim = 1024  
