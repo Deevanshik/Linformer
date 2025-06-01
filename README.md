@@ -24,7 +24,6 @@ This notebook includes:
 - The full model code, including low-rank projection logic
 - Tokenization and data handling
 - Training loop with learning rate scheduling
-- Visualization and analysis tools
 
 You can run this notebook end-to-end or modify it for your own experiments.
 
